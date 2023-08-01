@@ -6,7 +6,7 @@ function SingleProduct({name}) {
     const [singleProduct, setSingleProduct] = useState([])
      useEffect(()=>{
         fetchData()
-      },[fetchData])
+      },[])
   
      const apiUrl = 'https://appsalabackend.onrender.com/products'
   
