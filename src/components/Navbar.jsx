@@ -2,7 +2,7 @@ import logo from '../assets/img/logo.svg'
 import seachIcon from '../assets/img/search.svg'
 import Button from './Button'
 import Menu from './Menu';
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import SeachList from './SearchList';
 function Navbar({products}) {
   const categories = {
@@ -71,14 +71,14 @@ const filterData= () =>{
             <div className="menu">
                 <ul className="hover-menu-container">
 
-                    <li className='dropdown' onMouseEnter={handleMouseEnter} ><a href="">Categories</a>
+                    <li className='dropdown' onMouseEnter={handleMouseEnter} ><a href="/">Categories</a>
                 
                     {isMenuOpen && (
                       <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Menu childs={categories}/>
       </div>)}
         </li>
-                    <li className='dropdown' onMouseEnter={handleMouseEnter}><a href="">Blog</a>
+                    <li className='dropdown' onMouseEnter={handleMouseEnter}><a href="/">Blog</a>
                     {isBlogMenuOpen && (
                        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Menu childs={blogs}/></div>)}

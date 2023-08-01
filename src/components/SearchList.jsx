@@ -8,7 +8,7 @@ function SeachList({filteredData}) {
                     //       <a href="">{key}</a>
                     //   ))
                       Object?.entries(filteredData).map(([key, value])=>(
-                        <a href="">{filteredData[key].name}</a>
+                        <a href="/">{filteredData[key].name}</a>
                       ))
                       
                       }

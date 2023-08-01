@@ -1,7 +1,3 @@
-import monday from '../assets/img/monday.png'
-import dribbble from '../assets/img/dribbble.png'
-import figma from '../assets/img/Group 96.png'
-import behance from '../assets/img/behance.png'
 import Button from '../components/Button'
 import Products from '../components/Products'
 // import { useEffect } from "react"
