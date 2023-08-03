@@ -71,7 +71,7 @@ const filterData= () =>{
             <div className="menu">
                 <ul className="hover-menu-container">
 
-                    <li className='dropdown' onMouseEnter={handleMouseEnter} ><a href="/">Categories</a>
+                    <li className='dropdown' onMouseEnter={handleMouseEnter} ><a href="/product-list">Categories</a>
                 
                     {isMenuOpen && (
                       <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

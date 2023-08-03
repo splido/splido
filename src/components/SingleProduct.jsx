@@ -44,13 +44,15 @@ function SingleProduct({name}) {
 //     const foundProducts = products.find((product) => product.name === name);
 //     console.log(foundProducts)
   return (
+    <>
+    <img src={singleProduct[0]?.logo} alt=""/>
     <div className="product-text">
     <p className="product-info-heading">{singleProduct[0]?.name}</p>
     <p style={{color: "#454545;"}}>{singleProduct[0]?.review}
     </p>
     <p>749  Follows</p>
     </div>
-    
+    </>
   )
 }
 

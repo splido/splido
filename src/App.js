@@ -1,13 +1,17 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Addcompany from "./components/Addcompany";
+import Login from "./components/Login";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import ProductList from "./pages/ProductList";
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import { useEffect, useState } from "react";
+import PrivateRoute from "./pages/PrivateRoute";
 
 function App() {
   const [products, setProducts] = useState([])
+  const [isAuthenticated, setIsAuthenticated]=useState(false)
   useEffect(()=>{
     fetchData()
   },[])
@@ -26,12 +30,16 @@ function App() {
 
   return (
   <>
-    <Navbar products={products}/>
+    <Navbar products={products} />
     <Router>
     <Routes>
     <Route exact path="/" element={<Home products={products}/>} />
-    <Route path="/product/:name" element={<Product products={products}/>} />
     <Route path="/product-list" element={<ProductList products = {products}/>} />
+    <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated}/>} />
+    <Route path="/form" element={<PrivateRoute isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />} >
+    <Route path="/form" element={<Addcompany/>} />
+    </Route>
+    <Route path="/product/:name" element={<Product products={products}/>} />
     </Routes>
     </Router>
     <Footer/>

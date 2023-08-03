@@ -2,7 +2,7 @@ import monday from '../assets/img/monday.png'
 import dribbble from '../assets/img/dribbble.png'
 import figma from '../assets/img/Group 96.png'
 import behance from '../assets/img/behance.png'
-import evernote from '../assets/img/Group.png'
+// import evernote from '../assets/img/Group.png'
 import product from '../assets/img/product-image.png'
 import Button from '../components/Button'
 import { FaBookmark, FaGlobe } from 'react-icons/fa';
@@ -17,7 +17,6 @@ function Product({products}) {
       <header className="product-page-header container">
         <p className="page-path">Home / Work & Productivity</p>
         <div className="product-info-grid">
-            <img src={evernote} alt=""/>
            <SingleProduct name = {name}/>
             <div className="buttons">
                 <Button type= "btn-light"> <FaBookmark style={{margin: "10px;"}}/> Save</Button>
