@@ -16,7 +16,7 @@ function App() {
     fetchData()
   },[])
 
-  const apiUrl = 'https://appsalabackend.onrender.com/products'
+  const apiUrl = 'https://appsalabackend-p20y.onrender.com/products'
 
   const fetchData = async() =>{
     const response = await fetch(apiUrl)
@@ -30,8 +30,9 @@ function App() {
 
   return (
   <>
-    <Navbar products={products} />
+   
     <Router>
+    <Navbar products={products} />
     <Routes>
     <Route exact path="/" element={<Home products={products}/>} />
     <Route path="/product-list" element={<ProductList products = {products}/>} />

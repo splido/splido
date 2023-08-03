@@ -4,6 +4,7 @@ import Button from './Button'
 import Menu from './Menu';
 import { useState } from "react"
 import SeachList from './SearchList';
+import { Link } from 'react-router-dom';
 function Navbar({products}) {
   const categories = {
     Category_1: '#',
@@ -66,7 +67,9 @@ const filterData= () =>{
         <div className="container">
             <div className="navbar">
             <div className="logo">
+            <Link to={"/"} >
                 <img src={logo} alt=""/>
+                </Link>
             </div>
             <div className="menu">
                 <ul className="hover-menu-container">
@@ -99,7 +102,9 @@ const filterData= () =>{
             </div>
             <div >
             <div className="nav-buttons">
-           <Button type ='btn-light'>Login</Button>
+           <Button type ='btn-light'>
+            <Link to={"/login"} >Login</Link>
+           </Button>
            <Button type ='btn-dark'>Register</Button>
            </div>
         </div>

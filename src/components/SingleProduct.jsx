@@ -8,7 +8,7 @@ function SingleProduct({name}) {
         fetchData()
       },[])
   
-     const apiUrl = 'https://appsalabackend.onrender.com/products'
+     const apiUrl = 'https://appsalabackend-p20y.onrender.com/products'
   
     const fetchData = async() =>{
       const response = await fetch(apiUrl)
