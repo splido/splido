@@ -24,34 +24,34 @@ const Login = ({setIsAuthenticated}) => {
 
 
         let { email, password } = credentials
-        let res = await fetch("https://appsalabackend-p20y.onrender.com/login", {
-            method: "post",
-            body: JSON.stringify({
-                email, password
-            }), headers: {
-                "content-Type": "application/json"
-            }
-        })
-        let result = await res.json()
-    
-        // result.status ? {} 
-        // navigate("/form") : alert('wrong email or pass')
+        try {
+            let res = await fetch("https://appsalabackend-p20y.onrender.com/login", {
+              method: "post",
+              body: JSON.stringify({ email, password }),
+              headers: {
+                "Content-Type": "application/json"
+              }
+            });
         
-        if (result.status) {
-            setIsAuthenticated(true)
-            navigate("/form")
-        } else {
-            alert('wrong email or password')
-        }
-
-
-        // Reset the form fields after submission
-        setCredentials({
-            email: '',
-            password: '',
-        });
-    };
-
+            let result = await res.json();
+        
+            if (result.status) {
+              setIsAuthenticated(true);
+              navigate("/form");
+            } else {
+              alert('wrong email or password');
+            }
+        
+            // Reset the form fields after submission
+            setCredentials({
+              email: '',
+              password: '',
+            });
+          } catch (error) {
+            console.error("Error during fetch:", error);
+            alert('An error occurred during the login process.');
+          }
+        };
     return (
         <>
             <h2>Login</h2>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function SeachList({filteredData}) {
     return (
              <div className='dropdown-content'>
@@ -8,7 +10,7 @@ function SeachList({filteredData}) {
                     //       <a href="">{key}</a>
                     //   ))
                       Object?.entries(filteredData).map(([key, value])=>(
-                        <a href="/">{filteredData[key].name}</a>
+                        <Link to={`/product/${filteredData[key].slug}`}>{filteredData[key].name}</Link>
                       ))
                       
                       }

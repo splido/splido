@@ -10,14 +10,14 @@ import { useParams } from 'react-router'
 import SingleProduct from '../components/SingleProduct'
 
 function Product({products}) {
-    const{ name } = useParams()
+    const{ slug } = useParams()
   return (
     <>
     <div>
       <header className="product-page-header container">
         <p className="page-path">Home / Work & Productivity</p>
         <div className="product-info-grid">
-           <SingleProduct name = {name}/>
+           <SingleProduct slug = {slug}/>
             <div className="buttons">
                 <Button type= "btn-light"> <FaBookmark style={{margin: "10px;"}}/> Save</Button>
                 <Button type= "btn-dark"> <FaGlobe style={{margin: "10px;"}}/>Visit Web</Button>

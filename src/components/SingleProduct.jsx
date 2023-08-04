@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react"
-function SingleProduct({name}) {
+function SingleProduct({slug}) {
     // const products = props.products
     // const name = props.name
     const [singleProduct, setSingleProduct] = useState([])
@@ -17,7 +17,7 @@ function SingleProduct({name}) {
     //   console.log(data.data)
     //   console.log(typeof(data.data))
     // console.log(name)
-      const foundProducts = data.data.filter((product) => product.name === name);
+      const foundProducts = data.data.filter((product) => product.slug === slug);
       setSingleProduct(foundProducts)
       console.log(singleProduct[0].name)
       console.log(typeof(singleProduct))

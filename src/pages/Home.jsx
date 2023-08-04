@@ -1,16 +1,18 @@
-import monday from '../assets/img/monday.png'
-import dribbble from '../assets/img/dribbble.png'
-import figma from '../assets/img/Group 96.png'
-import behance from '../assets/img/behance.png'
-import reviewIcon from '../assets/img/icon-1.svg'
+// import monday from '../assets/img/monday.png'
+// import dribbble from '../assets/img/dribbble.png'
+// import figma from '../assets/img/Group 96.png'
+// import behance from '../assets/img/behance.png'
+// import reviewIcon from '../assets/img/icon-1.svg'
 import laptop from '../assets/img/Laptop.png'
 import clibboard from '../assets/img/Clipboard.png'
 import mobile from '../assets/img/mobile.png'
 import laptop2 from '../assets/img/Rectangle.png'
 import frame from '../assets/img/Frame 97.png'
 import search from '../assets/img/search.svg'
+import ProductCard from '../components/ProductCard'
+import ReviewCard from '../components/ReviewCard'
 
-function Home() {
+function Home({products}) {
   return (
     <div>
      <header className="header">
@@ -32,7 +34,8 @@ function Home() {
             <div className="container latest-reviews">
             <h1 className="heading">Latest Reviews</h1>
                 <div className="reviews-section">
-                <div className="reviews-card">
+                    <ProductCard products={products.data}/>
+                {/* <div className="reviews-card">
                     <div>
                         <img src={monday} alt=""/>
                     </div>
@@ -108,13 +111,14 @@ function Home() {
                                     <p>4/5 <span>(149 Follows)</span></p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
             </div>
         <div className="features">
             <h1 className="heading">Top Feature</h1>
             <div className="feature-section">
-                <div className="feature-card">
+            <ReviewCard products={products.data}/>
+                {/* <div className="feature-card">
                     <img src={reviewIcon}alt=""/>
                     <p className="card-heading">
                         Reviews
@@ -149,7 +153,7 @@ function Home() {
                     <p>Lorem ipsum dolor sit amet 
                         consectetur adipisicing elit. Sunt voluptates magni libero 
                         possimus esse consequatur consectetur vero sit omnis a.</p>
-                </div>
+                </div> */}
             </div>
         </div>
         <div className="market-place container">

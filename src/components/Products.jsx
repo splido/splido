@@ -27,13 +27,15 @@ function Products({products}) {
     //     setProductList 
     // }
     // // setTimeout(fetch, 1000);
+   const product_list = products?.slice(0,5)
+
   return (
     <div>
        {
 
         loading ? <Spinner/> :
-        products ? (
-          products.map((product)=>(
+        product_list ? (
+          product_list.map((product)=>(
                 <ProductItem key={product.id} product = {product}/>
             ))
         ): <>

@@ -1,5 +1,5 @@
 
-import monday from '../assets/img/monday.png'
+// import monday from '../assets/img/monday.png'
 import { Link } from 'react-router-dom'
 
 function ProductItem({product}) {
@@ -8,7 +8,7 @@ function ProductItem({product}) {
     <div className="product-card">
             <div className="product-reviews-card">
                 <div>
-                    <img src={monday}alt=""/>
+                    <img src={product.logo}alt="" style={{height: '50px'}}/>
                 </div>
                 <div className="details">
 
@@ -16,7 +16,7 @@ function ProductItem({product}) {
                         product.name
 }</p> */}
 
-<Link to={`/product/${product.name}`}> {product.name}</Link>
+<Link to={`/product/${product.slug}`}> {product.name}</Link>
                     <div className="stars">
                         <i className="fas fa-star"style={{color: "yellow;"}}></i>
                         <i className="fas fa-star"style={{color: "yellow;"}}></i>

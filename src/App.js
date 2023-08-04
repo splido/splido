@@ -40,7 +40,7 @@ function App() {
     <Route path="/form" element={<PrivateRoute isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />} >
     <Route path="/form" element={<Addcompany/>} />
     </Route>
-    <Route path="/product/:name" element={<Product products={products}/>} />
+    <Route path="/product/:slug" element={<Product products={products}/>} />
     </Routes>
     </Router>
     <Footer/>
