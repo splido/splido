@@ -424,7 +424,7 @@ const Addcompany = () => {
         />
         
           <label htmlFor="review">Review:</label>
-          <h1>Rich Text Editor</h1>
+          <h3>Review </h3>
           <div>
           <ReactQuill
             value={richText}
